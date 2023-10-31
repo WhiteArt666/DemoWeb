@@ -15,8 +15,33 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href=""><img src="image/Screenshot 2023-10-31 020118.png" alt="" height="50" width="150"></a></li>
-                <li><a href="">Đà Nẵng <i class="fas fa-sort-down"></i></a></li>
+                <li><a href=""><img src="image/Screenshot 2023-10-31 020118.png" alt="" height="35px" width="150px"></a></li>
+                <li id="adress-forms"><a href="#">Đà Nẵng <i class="fas fa-sort-down"></i></a></li>
+                <div class="adress-form">
+                    <div class="adress-form-content">
+                    <h2>Chọn Địa Chỉ Nhận Hàng <span id="adress-close"> Đóng </span></h2>
+                    <form action="">
+                        <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao</p>
+                        <select name="id">
+                            <option value="#">Chọn địa điểm</option>
+                            <option value="#">Đà Nẵng</option>
+
+                        </select>
+                        <select name="id">
+                            <option value="#">Chọn quận</option>
+                            <option value="#">quận 10</option>
+
+                        </select>
+                        <select name="id">
+                            <option value="#">Chọn phường/xã</option>
+                            <option value="#">Đà Nẵng</option>
+
+                        </select>
+                        <input type="text" placeholder="Số nhà, tên đường">
+                        <button>Xác Nhận</button>
+                    </form>
+                    </div>
+                </div>
                 <li>
                     <div class="search">
                         <input type="text" placeholder="Bạn tìm gì...">
@@ -47,6 +72,8 @@
                  </ul>
             </div>
         </section>
+        <script src="scrip.js"></script>
     </div>
+    
 </body>
 </html>
