@@ -153,18 +153,18 @@ nav ul li:nth-child(6) a
     margin-right: 6px;
     
  }
- .menu-bar ul li {
+ .menu-bar-content > ul > li {
     padding: 12px 6px;
     transition: all 0.2s ease;
  }
  .menu-bar ul li:hover{
     background-color: white;
  }
- .menu-bar ul li:nth-child(9)
+ .menu-bar-content > ul > li:nth-child(9)
  {
     position: relative;
  }
- .menu-bar ul li:nth-child(9) ::before
+ .menu-bar-content > ul > li:nth-child(9) ::before
  {
     position: absolute;
     content: "5% Off";
@@ -179,7 +179,7 @@ nav ul li:nth-child(6) a
     padding-left: 3px;
     color: white;
  }
- .menu-bar ul li:nth-child(9) ::after
+ .menu-bar-content > ul > li:nth-child(9) ::after
  {
     position: absolute;
     content: "";
@@ -260,5 +260,41 @@ nav ul li:nth-child(6) a
     color: white;
     border-radius: 5px;
  }
+ /*------------------------------------------------*/
+.menu-bar-content ul li {
+ position: relative;
+
+}
+.submenu{
+    position: absolute;
+    background-color: white;
+    width: 300px;
+    height: auto;
+    left: 0;
+    top: 100%;
+    padding: 12px;
+    display: none;
+    
+   
+}
+.submenu ul{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.submenu ul li{
+    padding: 6px 10px;
+}
+
+.menu-bar-content ul li:hover .submenu{
+ display: block;
+}
+.submenu ul li:hover a{
+    color: blue;
+}
+.submenu ul li:hover{
+    background: none;
+}
 
  
