@@ -7,9 +7,13 @@ ul{
     list-style: none;
 
 }
+li{
+    list-style: none;
+}
 a{
     text-decoration: none;
 }
+
 .container{
         max-width: 1300px;
         margin:auto;
@@ -267,13 +271,14 @@ nav ul li:nth-child(6) a
 }
 .submenu{
     position: absolute;
-    background-color: white;
-    width: 300px;
+    background-color: rgb(248, 246, 246);
+    width: auto;
     height: auto;
     left: 0;
     top: 100%;
     padding: 12px;
     display: none;
+    background-color: rgba(244, 239, 239, 0.6);
     
    
 }
@@ -289,6 +294,7 @@ nav ul li:nth-child(6) a
 
 .menu-bar-content ul li:hover .submenu{
  display: block;
+ z-index: 9999;
 }
 .submenu ul li:hover a{
     color: blue;
@@ -296,5 +302,163 @@ nav ul li:nth-child(6) a
 .submenu ul li:hover{
     background: none;
 }
+.big-banner a img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
 
- 
+
+.slaider {
+    padding: 5px 0; /* Tăng khoảng cách padding */
+    height: auto; /* Điều chỉnh chiều cao */
+    background-color: #f2f2f2; /* Màu nền */
+}
+
+.slaider-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Canh giữa nội dung theo chiều dọc */
+}
+
+.slaider-content-left {
+    width: 60%; /* Điều chỉnh chiều rộng */
+    padding: 20px;/* Thêm khoảng cách lề */
+    background-color: #fff; /* Màu nền */
+    border-radius: 10px; /* Góc tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+.slaider-content-left-top{
+      position: relative;
+      display: flex;
+       /* Ẩn phần vượt ra ngoài khung */
+       transition:all 0.3s ease ;
+}
+.slaider-content-left-top ul#image-list {
+    list-style: none;
+    display: flex;
+    transition: transform 0.5s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.slaider-content-left-top li {
+    flex: 0 0 100%;
+}
+
+.slaider-content-left-top img {
+    width: 100%;
+    height: auto; /* Điều chỉnh kích thước hình ảnh */
+    border-radius: 10px; /* Góc tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+.slaider-content-left-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Canh giữa nội dung theo chiều dọc */
+    margin-top: 20px; /* Thêm khoảng cách từ trên xuống */
+}
+
+.slaider-content-left-bottom li {
+    width: 18%; /* Điều chỉnh chiều rộng */
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 0; /* Thay đổi khoảng cách nội dung bên trong */
+    position: relative;
+    background-color: #fff; /* Màu nền */
+    border-radius: 5px; /* Góc tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+.slaider-content-left-bottom li::before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 70%;
+    background-color: #ddd;
+    right: 0;
+}
+
+.slaider-content-left-bottom li:active {
+    border-top: 4px solid #FF2000;
+}
+
+.salider-content-right {
+    width: 40%;
+            display: grid; /* Sử dụng lưới */
+            
+            grid-template-columns: repeat(2, 1fr); /* 2 cột bằng nhau */
+            grid-gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.salider-content-right li {
+    height: 50%;
+    width: 100%; /* Điều chỉnh chiều rộng và thêm khoảng cách */
+    margin:1%; /* Thêm khoảng cách giữa các hình ảnh */
+    text-align: center;
+}
+
+.salider-content-right li a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background-color: #fff; /* Màu nền */
+    border-radius: 5px; /* Góc tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+.salider-content-right li img {
+    max-width: 100%; /* Đảm bảo hình ảnh không bị tràn ra ngoài khung */
+    height: auto;
+}
+.slaider-content-left-top-btn{
+    position: absolute;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      
+}
+.slaider-content-left-top-btn i {
+    color: #333;
+    font-size: 32px;
+    height: 50px;
+    width: 25px;
+    background-color: #f5f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3;
+}
+/*---------------------------------------*/
+.slaider-content-left-top a:nth-child() img{
+    position: relative;
+}
+.slaider-content-left-top a:nth-child(2) img{
+    transform: translateY(100%);
+}
+.slaider-content-left-top a:nth-child(3) img{
+    transform: translateY(200%);
+}
+.slaider-content-left-top a:nth-child(4) img{
+    transform: translateY(300%);
+}
+.slaider-content-left-top a:nth-child(5) img{
+    transform: translateY(400%);
+    
+}
+.slaider-content-left-top-container{
+    position: relative;
+    overflow: hidden;
+}
+.slaider-content-left-top-container:hover i{
+    opacity: 1;
+}
